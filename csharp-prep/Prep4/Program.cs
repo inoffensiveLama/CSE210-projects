@@ -8,7 +8,7 @@ class Program
 
         int number;
         List<int> numbers = new List<int>();
-        int sum = 0;
+        float sum = 0;
         int largest = 0;
         do
         {
