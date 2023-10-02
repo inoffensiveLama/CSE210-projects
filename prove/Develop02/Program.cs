@@ -10,7 +10,11 @@ class Program
         do{
         
         Menu.DisplayMenu();
-        Menu.UpdateUserChoice();
+
+        do{
+            Menu.UpdateUserChoice();
+        }while((Menu._choice > 5) || (Menu._choice < 1));
+
         switch (Menu._choice) {
             case 1:
             //Write into the journal

@@ -18,6 +18,7 @@ public class Prompt{
 
     //mothods
     public string GetPrompt(){
+        //creates a random number and returns the prompt at that specific place in the array
         int randomNumber = _random.Next(0, _prompts.Length);
         return _prompts[randomNumber];
     }
