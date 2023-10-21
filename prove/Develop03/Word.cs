@@ -1,49 +1,38 @@
-public class Words{
+public class Word{
 
     //variables
-    private List<int> _blackedOutWordsIndex = new List<int>();
-    private int _numberOfWords;
+    private string _word = "";
+    private bool _visible = true;
 
-    public Words()
+    public Word(string word)
     {
-
+        _word = word;
     }
 
     //methods
-    public int GetRandomNumber(){
-        //create a random Nuber between 1 and the number of words in the string that contains the scripture in the class of Scripture
-        Random random = new Random();
-        int randomNumber = random.Next(0,_numberOfWords+1);
-        return randomNumber;
+
+    public string GetWord(){
+        //returns the variable _word if _visible is true, if not it will return _ equal to the number of letters in the word
+        
+        if(_visible){
+            return _word;
+        }else{
+            string blackedOutWord = "";
+            foreach(char c in _word){
+                    blackedOutWord += "_";
+                }
+            return blackedOutWord;
+        }
+        
     }
 
-    public void SetNumberOfWords(string[] scripture){
-        //check how many words there are in the string and set the variable to that number
-        _numberOfWords = scripture.Length;
+
+    public bool GetVisibility(){
+        //returns the bool that defines if the word is visible or not
+        return _visible;
     }
 
-    public int GetNumberOfWords(){
-        //returns the variable _numberOfWords
-        return _numberOfWords;
-    }
-
-    public List<int> getBlackedOutWordIndex(){
-        //returns the list with all the indexes, where the words should be blacked out
-        return _blackedOutWordsIndex;
-    }
-
-    public void blackOutWord(){
-        //this method will add a random number to the list of indexes that hold where the blacked out words are.
-        int blackOutIndex = 0;
-        do{
-            blackOutIndex = GetRandomNumber();
-        }while(_blackedOutWordsIndex.Contains(blackOutIndex));
-        _blackedOutWordsIndex.Add(blackOutIndex);
-    }
-
-    public int getNumberOfBlackedOutWords(){
-        //returns the number of blacked out words, this way we can keep track of how many words are still left
-        int numberOfBlackedOutWords = _blackedOutWordsIndex.Count;
-        return numberOfBlackedOutWords;
+    public void SetVisibilityToFalse(){
+        _visible = false;
     }
 }
