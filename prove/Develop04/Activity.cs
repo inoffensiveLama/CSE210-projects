@@ -90,12 +90,5 @@ public class Activity{
         ClearCharacters(1);
         
     }
-
-    public void testFunction(){
-        DisplayStartingMessage();
-        ShowSpinner(5);
-        ShowCountDownTimer(5);
-        DisplayEndingMessage();
-    }
     
 }
