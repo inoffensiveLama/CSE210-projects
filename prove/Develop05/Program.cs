@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop05 World!");
+        Goal CompletableGoal = new ChecklistGoal("name", "descr", 50, 111, 1, 40);
+        Console.WriteLine(CompletableGoal);
     }
 }
