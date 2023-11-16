@@ -17,6 +17,10 @@ public class CompletableGoal : Goal{
     }
 
     public override string ToString(){
-        return "";
+        if(_isComplete){
+            return $"[X] {_name} ({_description})";
+        }else{
+            return $"[ ] {_name} ({_description})";
+        }
     }
 }

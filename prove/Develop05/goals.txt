@@ -1,0 +1,4 @@
+300
+SimpleGoal:simple goal,descr simple,100,False
+EternalGoal:eternal goal,descr eternal,150
+ChecklistGoal:check goal,descr check goal,100,False,500,3,0

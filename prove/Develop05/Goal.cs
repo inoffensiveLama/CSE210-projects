@@ -14,6 +14,10 @@ public class Goal{
 
     }
 
+    public string GetName(){
+        return _name;
+    }
+
     public virtual int RecordEvent(){
         return _points;
     }
@@ -23,6 +27,6 @@ public class Goal{
     }
 
     public override string ToString(){
-        return $"{GetType().Name}:{_name},{_description},{_points}";
+        return $"[ ] {_name} ({_description})";
     }
 }
