@@ -4,13 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Creating Video objects
         Video video1 = new Video("Introduction to Programming", "CodeMaster", 600);
         Video video2 = new Video("Web Development Basics", "WebWizard", 480);
         Video video3 = new Video("Machine Learning Fundamentals", "AIDreamer", 720);
         Video video4 = new Video("Digital Art Techniques", "ArtCreator", 300);
 
-        // Adding comments to videos
         video1.addComment("JohnDoe", "Great video!");
         video1.addComment("Alice123", "Very informative.");
         video1.addComment("BobSmith", "Looking forward to more content.");
