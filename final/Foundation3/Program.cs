@@ -13,7 +13,7 @@ class Program
             new OutdoorGatheringEvent("Summer Picnic", "Enjoy the outdoors", "2023-06-30", "12:00", address, "sunny and warm"),
         };
 
-        foreach (var ev in events)
+        foreach (Event ev in events)
         {
             Console.WriteLine("=== Standard Details ===");
             Console.WriteLine(ev.ToString());
